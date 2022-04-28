@@ -1,0 +1,7 @@
+#img-bg{
+    background-image: url('https://github.com/janete.png'); /* ../../ retrocede */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
