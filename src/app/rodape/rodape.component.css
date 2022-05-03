@@ -1,0 +1,15 @@
+ul.social-network {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: .5rem;
+}
+
+.fa {
+    font-size: 2rem;
+    padding: .5rem;
+}
