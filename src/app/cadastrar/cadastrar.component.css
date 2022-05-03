@@ -1,7 +1,54 @@
 #img-bg{
-    background-image: url('https://github.com/janete.png'); /* ../../ retrocede */
+    /* ../../ retrocede */
+    /* background-image: url('https://github.com/janete.png');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: var(--roxo-4);
+    height: 100vh;
+}
+
+a {
+    color: var(--roxo-2)!important;
+}
+
+a:hover {
+    color: var(--roxo-2)!important;
+}
+
+h1 {
+    font-size: 2.5rem!important;
+    font-weight: 600;
+}
+p.subtitle {
+    font-size: 1.25rem;
+    color: var(--cinza-2);
+}
+
+.form-control {
+    color: var(--cinza-1);
+    border-color: var(--cinza-3);
+}
+
+.btn-roxo {
+    background-color: var(--roxo-2)!important;
+    color: #fff!important;
+}
+
+.btn-roxo:hover {
+    background-color: var(--roxo-1)!important;
+    color: #fff!important;
+}
+
+.btn-roxo-outline {
+    border-color: var(--roxo-2)!important;
+    background-color: transparent!important;
+    color: var(--roxo-2)!important;
+}
+
+.btn-roxo-outline:hover {
+    border-color: var(--roxo-2)!important;
+    background-color: var(--roxo-2)!important;
+    color: #fff!important;
 }
