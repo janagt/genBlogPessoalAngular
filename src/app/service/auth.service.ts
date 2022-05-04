@@ -13,7 +13,7 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  logar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
+  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
     return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/logar', usuarioLogin);
   }
 

@@ -15,7 +15,9 @@ export class CadastrarComponent implements OnInit {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    window.scroll(0,0)
+  }
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value;
@@ -28,7 +30,7 @@ export class CadastrarComponent implements OnInit {
   cadastrar() {
     this.usuario.tipo = this.tipoUsuario;
 
-    if (this.usuario.senha = this.confirmarSenha) {
+    if (this.usuario.senha == this.confirmarSenha) {
       this.auth.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         console.log(this.usuario);
         this.usuario = resp;

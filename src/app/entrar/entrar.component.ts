@@ -14,9 +14,12 @@ export class EntrarComponent implements OnInit {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    window.scroll(0,0)
+  }
 
-  /* logar() {
+  /* forma antiga, depreciada
+  logar() {
     this.auth.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=>{
       this.usuarioLogin = resp;
       alert('Logado com sucesso');
@@ -30,8 +33,8 @@ export class EntrarComponent implements OnInit {
     });
   } */
 
-  logar() {
-    this.auth.logar(this.usuarioLogin).subscribe({
+  entrar() {
+    this.auth.entrar(this.usuarioLogin).subscribe({
       next: (resp: UsuarioLogin) => {
         this.usuarioLogin = resp;
         alert('Usuário logado com sucesso');
