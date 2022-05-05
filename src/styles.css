@@ -7,29 +7,128 @@
   --cinza-3: #D8E2EB;
   --cinza-4: #E8F0F5;
   --roxo-1: #352C9C;
-  --roxo-2: rgb(90, 78, 229);
-  --roxo-3: rgb(236, 233, 255);
+  --roxo-2: #5a4ee5;
+  --roxo-3: #ece9ff;
   --roxo-4: #FAF9FF;
 }
 
-html{
-  scroll-behavior: smooth;
-}   
-
-body{
-    font-family: 'Inter', sans-serif!important;
-    color: var(--cinza-1)!important;
+* {
+  font-family: 'Inter', sans-serif;
+  color: var(--cinza-1);
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--cinza-2)!important;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--cinza-2)!important;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--cinza-2)!important;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+/* body{
+} */
+
+a {
+  color: var(--roxo-2)!important;
+}
+
+a:hover {
+  color: var(--roxo-2)!important;
+} 
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--cinza-2) !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--cinza-2) !important;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--cinza-2) !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.text-roxo1 {
+  color: var(--roxo-1);
+}
+
+.text-roxo2 {
+  color: var(--roxo-2);
+}
+
+.text-roxo3 {
+  color: var(--roxo-3);
+}
+
+.text-roxo4 {
+  color: var(--roxo-4);
+}
+
+.text-cinza1 {
+  color: var(--cinza-1);
+}
+
+.text-cinza2 {
+  color: var(--cinza-2);
+}
+
+.text-cinza3 {
+  color: var(--cinza-3);
+}
+
+.text-cinza4 {
+  color: var(--cinza-4);
+}
+
+.bg-roxo1 {
+  background: var(--roxo-1);
+}
+
+.bg-roxo2 {
+  background: var(--roxo-2);
+}
+
+.bg-roxo3 {
+  background: var(--roxo-3);
+}
+
+.bg-roxo4 {
+  background: var(--roxo-4);
+}
+
+.bg-cinza1 {
+  background: var(--cinza-1);
+}
+
+.bg-cinza2 {
+  background: var(--cinza-2);
+}
+
+.bg-cinza3 {
+  background: var(--cinza-3);
+}
+
+.bg-cinza4 {
+  background: var(--cinza-4);
+}

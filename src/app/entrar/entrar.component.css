@@ -8,14 +8,6 @@
     height: 100vh;
 }
 
-a {
-    color: var(--roxo-2)!important;
-}
-
-a:hover {
-    color: var(--roxo-2)!important;
-}
-
 h1 {
     font-size: 2.5rem!important;
     font-weight: 600;

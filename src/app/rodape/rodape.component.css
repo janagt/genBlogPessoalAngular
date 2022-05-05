@@ -9,7 +9,20 @@ ul.social-network li {
     padding: .5rem;
 }
 
-.fa {
+/* .fa {
     font-size: 2rem;
     padding: .5rem;
+} */
+
+.social-network i.fa {
+    color: var(--cinza-2)!important;
+}
+.social-network i.fa:hover{
+    color: var(--roxo-2)!important;
+}
+
+hr {
+    border: 1px solid var(--cinza-4);
+    margin: 0;
+    padding: 0;
 }
