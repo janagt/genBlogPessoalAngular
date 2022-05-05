@@ -1,0 +1,19 @@
+.py-100{
+    padding: 6rem 0;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--cinza-1);
+    border-color: var(--cinza-3);
+    background-color: var(--cinza-4);
+}
+
+.btn-cinza {
+    background-color: var(--roxo-2)!important;
+    color: #fff!important;
+}
+
+.btn-cinza:hover {
+    background-color: var(--roxo-2)!important;
+    color: #fff!important;
+}
