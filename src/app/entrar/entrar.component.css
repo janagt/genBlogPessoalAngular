@@ -22,16 +22,6 @@ p.subtitle {
     border-color: var(--cinza-3);
 }
 
-.btn-roxo {
-    background-color: var(--roxo-2)!important;
-    color: #fff!important;
-}
-
-.btn-roxo:hover {
-    background-color: var(--roxo-1)!important;
-    color: #fff!important;
-}
-
 
 /* textarea:focus,
 input[type="text"]:focus,

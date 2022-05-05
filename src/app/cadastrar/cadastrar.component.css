@@ -31,24 +31,3 @@ p.subtitle {
     border-color: var(--cinza-3);
 }
 
-.btn-roxo {
-    background-color: var(--roxo-2)!important;
-    color: #fff!important;
-}
-
-.btn-roxo:hover {
-    background-color: var(--roxo-1)!important;
-    color: #fff!important;
-}
-
-.btn-roxo-outline {
-    border-color: var(--roxo-2)!important;
-    background-color: transparent!important;
-    color: var(--roxo-2)!important;
-}
-
-.btn-roxo-outline:hover {
-    border-color: var(--roxo-2)!important;
-    background-color: var(--roxo-2)!important;
-    color: #fff!important;
-}

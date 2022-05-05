@@ -132,3 +132,26 @@ a:hover {
 .bg-cinza4 {
   background: var(--cinza-4);
 }
+
+
+.btn-roxo2 {
+  background-color: var(--roxo-2)!important;
+  color: #fff!important;
+}
+
+.btn-roxo2:hover {
+  background-color: var(--roxo-1)!important;
+  color: #fff!important;
+}
+
+.btn-roxo2-outline {
+  border-color: var(--roxo-2)!important;
+  background-color: transparent!important;
+  color: var(--roxo-2)!important;
+}
+
+.btn-roxo2-outline:hover {
+  border-color: var(--roxo-2)!important;
+  background-color: var(--roxo-2)!important;
+  color: #fff!important;
+}
