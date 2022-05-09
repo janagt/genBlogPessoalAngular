@@ -21,17 +21,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body{
-} */
-
 a {
-  color: var(--roxo-2)!important;
+  color: var(--roxo-2) !important;
 }
 
 a:hover {
-  color: var(--roxo-2)!important;
-} 
+  color: var(--roxo-2) !important;
+}
 
+/* Placeholder
+   ========================================================================== */
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--cinza-2) !important;
@@ -49,7 +48,8 @@ a:hover {
   color: var(--cinza-2) !important;
 }
 
-/* Scrollbar styles */
+/* Barra de rolagem
+   ========================================================================== */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -69,6 +69,9 @@ a:hover {
   background: #999;
 }
 
+/* Bootstrap
+   ========================================================================== */
+/* Texto */
 .text-roxo1 {
   color: var(--roxo-1);
 }
@@ -101,6 +104,7 @@ a:hover {
   color: var(--cinza-4);
 }
 
+/* Background */
 .bg-roxo1 {
   background: var(--roxo-1);
 }
@@ -133,25 +137,49 @@ a:hover {
   background: var(--cinza-4);
 }
 
-
+/* Botão */
 .btn-roxo2 {
-  background-color: var(--roxo-2)!important;
-  color: #fff!important;
+  background-color: var(--roxo-2) !important;
+  color: #fff !important;
 }
 
 .btn-roxo2:hover {
-  background-color: var(--roxo-1)!important;
-  color: #fff!important;
+  background-color: var(--roxo-1) !important;
+  color: #fff !important;
 }
 
 .btn-roxo2-outline {
-  border-color: var(--roxo-2)!important;
-  background-color: transparent!important;
-  color: var(--roxo-2)!important;
+  border-color: var(--roxo-2) !important;
+  background-color: transparent !important;
+  color: var(--roxo-2) !important;
 }
 
 .btn-roxo2-outline:hover {
-  border-color: var(--roxo-2)!important;
-  background-color: var(--roxo-2)!important;
-  color: #fff!important;
+  border-color: var(--roxo-2) !important;
+  background-color: var(--roxo-2) !important;
+  color: #fff !important;
+}
+
+/* Texto - Pesos
+   ========================================================================== */
+.t-400{
+  font-weight: 400 !important;
+}
+
+.t-600{
+  font-weight: 600 !important;
+}
+
+/* Padding
+   ========================================================================== */
+.py-100{
+  padding: 6rem 0;
+}
+
+.pt-100{
+  padding-top: 6rem;
+}
+
+.pb-100{
+  padding-bottom: 6rem;
 }
