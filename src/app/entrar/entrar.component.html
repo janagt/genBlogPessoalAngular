@@ -8,19 +8,21 @@
                     <h1 class="text-left mb-3">Entrar</h1>
                     <p class="subtitle">Faça seu login para acessar o conteúdo da plataforma.</p>
 
-                    <div class="form-group mt-5">
-                        <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" [(ngModel)]="usuarioLogin.usuario" name="usuario" id="usuario" placeholder="Digite o usuário">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input class="form-control" type="password" [(ngModel)]="usuarioLogin.senha" name="senha" id="senha" placeholder="Digite a senha">
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-roxo2" (click)="entrar()">Entrar</button>
-                    </div>
+                    <form action="">
+                        <div class="form-group mt-5">
+                            <label for="usuario">Usuário</label>
+                            <input class="form-control" type="text" [(ngModel)]="usuarioLogin.usuario" name="usuario" id="usuario" placeholder="Digite o usuário">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input class="form-control" type="password" [(ngModel)]="usuarioLogin.senha" name="senha" id="senha" placeholder="Digite a senha">
+                        </div>
+    
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-roxo2" (click)="entrar()">Entrar</button>
+                        </div>
+                    </form>
 
                     <hr class="my-5">
 
