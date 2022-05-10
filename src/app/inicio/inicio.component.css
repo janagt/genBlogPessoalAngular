@@ -1,11 +1,11 @@
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: var(--cinza-1)!important;
-    border-color: var(--cinza-3);
-    background-color: var(--cinza-4);
+.py-100{
+    padding: 6rem 0;
 }
 
-.nav-link-color{
-    color: var(--cinza-2)!important;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--cinza-1);
+    border-color: var(--cinza-3);
+    background-color: var(--cinza-4);
 }
 
 .btn-cinza {
@@ -16,8 +16,4 @@
 .btn-cinza:hover {
     background-color: var(--roxo-2)!important;
     color: #fff!important;
-}
-
-h5{
-    line-height: 2rem;
 }

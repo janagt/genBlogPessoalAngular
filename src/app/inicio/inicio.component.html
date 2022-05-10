@@ -1,44 +1,41 @@
-<div class="container-fluid bg-roxo4">
+<div class="container-fluid">
 
-    <div class="container">
-        <div class="row d-flex align-items-center py-100">
-            <div class="col-md-6">
-    
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-10">
-                        <h1 class="display-4 t-400">Bem vinde ao<br><strong class="t-600">Blog Pessoal!</strong></h1>
-                        <h5 class="text-cinza2 t-400">Fique <strong class="t-600 text-cinza2">à vontade</strong> para postar<br>o que quiser e interagir!</h5>
-                    </div>
-                </div>
-    
-                <div class="row d-flex justify-content-center mt-3 mb-5">
-                    <div class="col-md-10">
-                        <button class="btn btn-roxo2 mx-1" data-toggle="modal" data-target="#novaPostagem">Nova
-                            Postagem</button>
-                        <a class="btn btn-roxo2-outline mx-1" href="#postagens">Ver Postagem</a>
-                    </div>
+    <div class="row bg-roxo4 d-flex align-items-center py-100">
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="display-4">Bem vinde ao <strong>Blog Pessoal!</strong></h1>
+                    <h5 class="text-cinza2">Fique à vontade para postar o que quiser e interagir!</h5>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="../../assets/img/inicio.png" class="img-fluid" alt="">
+
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-dark mx-1" data-toggle="modal" data-target="#novaPostagem">Nova
+                        Postagem</button>
+                    <a class="btn btn-outline-dark mx-1" href="#postagens">Ver Postagem</a>
+                </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <img src="../../assets/img/inicio.png" class="img-fluid" alt="">
+        </div>
     </div>
-
 </div>
 
 <div class="container my-5" id="postagens">
     <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active nav-link-color" id="pills-todasPostagens-tab" data-toggle="pill" href="#pills-todasPostagens"
+            <a class="nav-link active" id="pills-todasPostagens-tab" data-toggle="pill" href="#pills-todasPostagens"
                 role="tab" aria-controls="pills-todasPostagens" aria-selected="true">Todas as postagens</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-color" id="pills-minhasPostagens-tab" data-toggle="pill" href="#pills-minhasPostagens"
+            <a class="nav-link" id="pills-minhasPostagens-tab" data-toggle="pill" href="#pills-minhasPostagens"
                 role="tab" aria-controls="pills-minhasPostagens" aria-selected="false">Minhas postagens</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-color" id="pills-postagensTema-tab" data-toggle="pill" href="#pills-postagensTema" role="tab"
+            <a class="nav-link" id="pills-postagensTema-tab" data-toggle="pill" href="#pills-postagensTema" role="tab"
                 aria-controls="pills-postagensTema" aria-selected="false">Postagens por tema</a>
         </li>
     </ul>

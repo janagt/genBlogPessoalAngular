@@ -13,53 +13,51 @@
                     <h1 class="text-left mb-3">Cadastro</h1>
                     <p class="subtitle">Faça seu login para acessar o conteúdo da plataforma.</p>
 
-                    <form action="">
-                        <div class="form-group mt-5">
-                            <label class="small" for="nome">Nome:</label>
-                            <input class="form-control" type="text" [(ngModel)]="usuario.nome" name="nome" id="nome"
-                            placeholder="Digite seu nome">
-                        </div>
-    
-                        <div class="form-group">
-                            <label class="small" for="usuario">Usuário:</label>
-                            <input class="form-control" type="text" [(ngModel)]="usuario.usuario" name="usuario" id="usuario"
-                                placeholder="Digite seu email">
-                        </div>
-    
-                        <div class="form-group">
-                            <label class="small" for="foto">Link da foto:</label>
-                            <input class="form-control" type="text" [(ngModel)]="usuario.foto" name="foto" id="foto"
-                                placeholder="http://imgur.com/suafoto.png">
-                        </div>
-    
-                        <div class="form-group">
-                            <label class="small" for="senha">Senha:</label>
-                            <input class="form-control" type="password" name="senha" id="senha" (input)="confirmSenha($event)"
-                                placeholder="Digite sua senha">
-                        </div>
-    
-                        <div class="form-group">
-                            <label class="small" for="confirmarSenha">Confirmar senha:</label>
-                            <input class="form-control" type="password" [(ngModel)]="usuario.senha" name="confirmSenha
-                            " id="senha"
-                                placeholder="Digite sua senha novamente">
-                        </div>
-    
-                        <div class="form-group">
-                            <label class="small" for="tipo">Tipo de usuário:</label>
-                            <select name="tipo" id="tipo" class="form-control" (change)="tipoUser($event)">   
-                                <option disabled selected>Selecione um tipo de usuário:</option>                         
-                                <option value="normal">Normal</option>
-                                <option value="adm">Administrador</option>
-                            </select>
-                        </div>
-    
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-roxo2-outline mr-2" routerLink="/entrar">Cancelar</button>
-    
-                            <button type="submit" class="btn btn-roxo2 ml-2" (click)="cadastrar()">Cadastrar</button>
-                        </div>
-                    </form>
+                    <div class="form-group mt-5">
+                        <label class="small" for="nome">Nome:</label>
+                        <input class="form-control" type="text" [(ngModel)]="usuario.nome" name="nome" id="nome"
+                        placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="small" for="usuario">Usuário:</label>
+                        <input class="form-control" type="text" [(ngModel)]="usuario.usuario" name="usuario" id="usuario"
+                            placeholder="Digite seu email">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="small" for="foto">Link da foto:</label>
+                        <input class="form-control" type="text" [(ngModel)]="usuario.foto" name="foto" id="foto"
+                            placeholder="http://imgur.com/suafoto.png">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="small" for="senha">Senha:</label>
+                        <input class="form-control" type="password" name="senha" id="senha" (input)="confirmSenha($event)"
+                            placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="small" for="confirmarSenha">Confirmar senha:</label>
+                        <input class="form-control" type="password" [(ngModel)]="usuario.senha" name="confirmSenha
+                        " id="senha"
+                            placeholder="Digite sua senha novamente">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="small" for="tipo">Tipo de usuário:</label>
+                        <select name="tipo" id="tipo" class="form-control" (change)="tipoUser($event)">   
+                            <option disabled selected>Selecione um tipo de usuário:</option>                         
+                            <option value="normal">Normal</option>
+                            <option value="adm">Administrador</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-roxo2-outline mr-2" routerLink="/entrar">Cancelar</button>
+
+                        <button type="submit" class="btn btn-roxo2 ml-2" (click)="cadastrar()">Cadastrar</button>
+                    </div>
 
                     <hr class="my-5">
 
