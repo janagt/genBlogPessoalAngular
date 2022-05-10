@@ -1,95 +1,212 @@
 <div class="container-fluid bg-roxo4">
-
-    <div class="container">
-        <div class="row d-flex align-items-center py-100">
-            <div class="col-md-6">
-    
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-10">
-                        <h1 class="display-4 t-400">Bem vinde ao<br><strong class="t-600">Blog Pessoal!</strong></h1>
-                        <h5 class="text-cinza2 t-400">Fique <strong class="t-600 text-cinza2">à vontade</strong> para postar<br>o que quiser e interagir!</h5>
-                    </div>
-                </div>
-    
-                <div class="row d-flex justify-content-center mt-3 mb-5">
-                    <div class="col-md-10">
-                        <button class="btn btn-roxo2 mx-1" data-toggle="modal" data-target="#novaPostagem">Nova
-                            Postagem</button>
-                        <a class="btn btn-roxo2-outline mx-1" href="#postagens">Ver Postagem</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="../../assets/img/inicio.png" class="img-fluid" alt="">
-            </div>
+  <div class="container">
+    <div class="row d-flex align-items-center py-100">
+      <div class="col-md-6">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10">
+            <h1 class="display-4 t-400">
+              Bem vinde ao<br /><strong class="t-600">Blog Pessoal!</strong>
+            </h1>
+            <h5 class="text-cinza2 t-400">
+              Fique <strong class="t-600 text-cinza2">à vontade</strong> para
+              postar<br />o que quiser e interagir!
+            </h5>
+          </div>
         </div>
-    </div>
 
+        <div class="row d-flex justify-content-center mt-3 mb-5">
+          <div class="col-md-10">
+            <button
+              class="btn btn-roxo2 mx-1"
+              data-toggle="modal"
+              data-target="#novaPostagem"
+            >
+              Nova Postagem
+            </button>
+            <a class="btn btn-roxo2-outline mx-1" href="#postagens"
+              >Ver Postagem</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="../../assets/img/inicio.png" class="img-fluid" alt="" />
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container my-5" id="postagens">
-    <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active nav-link-color" id="pills-todasPostagens-tab" data-toggle="pill" href="#pills-todasPostagens"
-                role="tab" aria-controls="pills-todasPostagens" aria-selected="true">Todas as postagens</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link nav-link-color" id="pills-minhasPostagens-tab" data-toggle="pill" href="#pills-minhasPostagens"
-                role="tab" aria-controls="pills-minhasPostagens" aria-selected="false">Minhas postagens</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link nav-link-color" id="pills-postagensTema-tab" data-toggle="pill" href="#pills-postagensTema" role="tab"
-                aria-controls="pills-postagensTema" aria-selected="false">Postagens por tema</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-todasPostagens" role="tabpanel"
-            aria-labelledby="pills-todasPostagens-tab">
-            Todas as postagens irão aqui
+  <ul
+    class="nav nav-pills mb-3 d-flex justify-content-center"
+    id="pills-tab"
+    role="tablist"
+  >
+    <li class="nav-item">
+      <a
+        class="nav-link active nav-link-color"
+        id="pills-todasPostagens-tab"
+        data-toggle="pill"
+        href="#pills-todasPostagens"
+        role="tab"
+        aria-controls="pills-todasPostagens"
+        aria-selected="true"
+        >Todas as postagens</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link nav-link-color"
+        id="pills-minhasPostagens-tab"
+        data-toggle="pill"
+        href="#pills-minhasPostagens"
+        role="tab"
+        aria-controls="pills-minhasPostagens"
+        aria-selected="false"
+        >Minhas postagens</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link nav-link-color"
+        id="pills-postagensTema-tab"
+        data-toggle="pill"
+        href="#pills-postagensTema"
+        role="tab"
+        aria-controls="pills-postagensTema"
+        aria-selected="false"
+        >Postagens por tema</a
+      >
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="pills-todasPostagens"
+      role="tabpanel"
+      aria-labelledby="pills-todasPostagens-tab"
+    >
+      <!-- Todas as postagens irão aqui -->
+
+      <div class="card-columns">
+        <div class="card text-center" *ngFor="let item of listaPostagens">
+          <div class="card-header">
+            {{ item.tema }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ item.titulo }}</h5>
+            <p class="card-text">{{ item.texto }}</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+          <div class="card-footer text-muted">
+            {{ item.data }} - {{ item.usuario }}
+          </div>
         </div>
-        <div class="tab-pane fade" id="pills-minhasPostagens" role="tabpanel"
-            aria-labelledby="pills-minhasPostagens-tab">
-            Minhas postagens irão aqui
-        </div>
-        <div class="tab-pane fade" id="pills-postagensTema" role="tabpanel" aria-labelledby="pills-postagensTema-tab">
-            Postagens pelo tema irão aqui</div>
+      </div>
     </div>
+    <div
+      class="tab-pane fade"
+      id="pills-minhasPostagens"
+      role="tabpanel"
+      aria-labelledby="pills-minhasPostagens-tab"
+    >
+      Minhas postagens irão aqui
+    </div>
+    <div
+      class="tab-pane fade"
+      id="pills-postagensTema"
+      role="tabpanel"
+      aria-labelledby="pills-postagensTema-tab"
+    >
+      Postagens pelo tema irão aqui
+    </div>
+  </div>
 </div>
 
-
-
 <!-- Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="novaPostagem" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Nova postagem</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <div class="form-group">
-                        <label for="titulo">Título</label>
-                        <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite o título">
-                    </div>
-                    <div class="form-group">
-                        <label for="titulo">Texto</label>
-                        <textarea name="texto" id="texto" class="form-control" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="titulo">Escolha um tema ou <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a></label>
-                        <select name="tema" id="tema" class="form-control">
-                            <option value="">Tema</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-dark">Publicar</button>
-            </div>
+<div
+  class="modal fade"
+  id="novaPostagem"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="novaPostagem"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Nova postagem</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input
+              type="text"
+              name="titulo"
+              id="titulo"
+              class="form-control"
+              placeholder="Digite o título"
+              [(ngModel)]="postagem.titulo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="titulo">Texto</label>
+            <textarea
+              name="texto"
+              id="texto"
+              class="form-control"
+              rows="3"
+              [(ngModel)]="postagem.texto"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="titulo"
+              >Escolha um tema ou
+              <a routerLink="/tema" data-dismiss="modal"
+                >cadastre um novo</a
+              ></label
+            >
+            <select
+              name="tema"
+              id="tema"
+              class="form-control"
+              [(ngModel)]="idTema"
+              (change)="(findByIdTema)"
+            >
+              <option disabled selected>Selecione um tipo de usuário:</option>
+              <option *ngFor="let item of listaTemas" value="{{ item.id }}">
+                {{ item.descricao }}
+              </option>
+            </select>
+          </div>
         </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            data-dismiss="modal"
+          >
+            Cancelar
+          </button>
+          <button
+            type="submit"
+            class="btn btn-dark"
+            (click)="publicar()"
+            data-dismiss="modal"
+          >
+            Publicar
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
