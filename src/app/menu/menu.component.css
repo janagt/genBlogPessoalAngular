@@ -9,7 +9,3 @@ a:hover {
 .b-img {
     border: 5px solid var(--roxo-2);
 }
-
-.t-boasvindas {
-    text-transform: capitalize;
-}
