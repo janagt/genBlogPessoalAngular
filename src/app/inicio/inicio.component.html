@@ -91,7 +91,7 @@
       <div class="card-columns">
         <div class="card text-center" *ngFor="let item of listaPostagens">
           <div class="card-header">
-            {{ item.tema }}
+            <!-- {{ item.tema.descricao }} -->
           </div>
           <div class="card-body">
             <h5 class="card-title">{{ item.titulo }}</h5>
@@ -99,7 +99,7 @@
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
           <div class="card-footer text-muted">
-            {{ item.data }} - {{ item.usuario }}
+            {{item.data | date: 'dd/MM/yyyy'}} às {{ item.data | date: 'HH:mm'}} - {{ item.usuario.nome }}
           </div>
         </div>
       </div>

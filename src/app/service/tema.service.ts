@@ -39,7 +39,6 @@ export class TemaService {
 /* `` passa parâmetro */
   deleteTema(id: number){
     return this.http.delete(`https://janabp.herokuapp.com/temas/${id}`, this.token)
-/*     return this.http.delete(`http://localhost:8080/temas/${id}`, this.token) */
   }
   
 }
