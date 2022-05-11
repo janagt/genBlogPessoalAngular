@@ -12,7 +12,7 @@ import { AuthService } from '../service/auth.service';
 export class EntrarComponent implements OnInit {
   usuarioLogin: UsuarioLogin = new UsuarioLogin();
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     window.scroll(0,0)
@@ -34,7 +34,7 @@ export class EntrarComponent implements OnInit {
   } */
 
   entrar() {
-    this.auth.entrar(this.usuarioLogin).subscribe({
+    this.authService.entrar(this.usuarioLogin).subscribe({
       next: (resp: UsuarioLogin) => {
         this.usuarioLogin = resp;
         alert('Usuário logado com sucesso');

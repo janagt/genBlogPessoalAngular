@@ -17,23 +17,19 @@ export class TemaService {
 
   getAllTema(): Observable<Tema[]>{
     return this.http.get<Tema[]>('https://janabp.herokuapp.com/temas', this.token)
-/*     return this.http.get<Tema[]>('http://localhost:8080/temas', this.token) */
   }
 
   getByIdTema(id: number): Observable<Tema>{
     return this.http.get<Tema>(`https://janabp.herokuapp.com/temas/${id}`, this.token)
-/*     return this.http.get<Tema>(`http://localhost:8080/temas/${id}`, this.token) */
 
   }
 
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://janabp.herokuapp.com/temas', tema, this.token)
-/*     return this.http.post<Tema>('http://localhost:8080/temas', tema, this.token) */
   }
 
   putTema(tema: Tema): Observable<Tema>{
     return this.http.put<Tema>('https://janabp.herokuapp.com/temas', tema, this.token)
-/*     return this.http.put<Tema>('http://localhost:8080/temas', tema, this.token) */
   }
   
 /* `` passa parâmetro */

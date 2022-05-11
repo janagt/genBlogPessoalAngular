@@ -56,6 +56,7 @@
     </li>
     <li class="nav-item">
       <a
+      (click)="findByIdUsuario()"
         class="nav-link nav-link-color"
         id="pills-minhasPostagens-tab"
         data-toggle="pill"
@@ -90,19 +91,20 @@
 
       <div class="card-columns">
         <div class="card text-center" *ngFor="let item of listaPostagens">
-          <div class="card-header">
-            <!-- {{ item.tema.descricao }} -->
+          <div class="card-header text-muted small">
+            {{ item.tema.descricao }}
           </div>
           <div class="card-body">
             <h5 class="card-title">{{ item.titulo }}</h5>
             <p class="card-text">{{ item.texto }}</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted small">
             {{item.data | date: 'dd/MM/yyyy'}} às {{ item.data | date: 'HH:mm'}} - {{ item.usuario.nome }}
           </div>
         </div>
       </div>
+
     </div>
     <div
       class="tab-pane fade"
@@ -110,7 +112,24 @@
       role="tabpanel"
       aria-labelledby="pills-minhasPostagens-tab"
     >
-      Minhas postagens irão aqui
+      <!-- Minhas postagens irão aqui -->
+      
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of usuario.postagem'>
+          <div class="card-header text-muted small">
+            {{ item.tema.descricao }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ item.titulo }}</h5>
+            <p class="card-text">{{ item.texto }}</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+          <div class="card-footer text-muted small">
+            {{item.data | date: 'dd/MM/yyyy'}} às {{ item.data | date: 'HH:mm'}}
+          </div>
+        </div>
+      </div>
+
     </div>
     <div
       class="tab-pane fade"
