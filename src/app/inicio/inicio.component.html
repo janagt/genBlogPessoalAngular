@@ -115,17 +115,17 @@
       <!-- Minhas postagens irão aqui -->
       
       <div class="card-columns">
-        <div class="card text-center" *ngFor='let item of usuario.postagem'>
+        <div class="card text-center" *ngFor='let tema of usuario.postagens'>
           <div class="card-header text-muted small">
-            {{ item.tema.descricao }}
+            {{ tema.tema.descricao }}
           </div>
           <div class="card-body">
-            <h5 class="card-title">{{ item.titulo }}</h5>
-            <p class="card-text">{{ item.texto }}</p>
+            <h5 class="card-title">{{ tema.titulo }}</h5>
+            <p class="card-text">{{ tema.texto }}</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
           <div class="card-footer text-muted small">
-            {{item.data | date: 'dd/MM/yyyy'}} às {{ item.data | date: 'HH:mm'}}
+            {{tema.data | date: 'dd/MM/yyyy'}} às {{ tema.data | date: 'HH:mm'}}
           </div>
         </div>
       </div>
