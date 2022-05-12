@@ -23,9 +23,7 @@
             >
               Nova Postagem
             </button>
-            <a class="btn btn-roxo2-outline mx-1" href="#postagens"
-              >Ver Postagem</a
-            >
+            <a class="btn btn-roxo2-outline mx-1" href="#postagens">Ver Postagem</a>
           </div>
         </div>
       </div>
@@ -56,7 +54,7 @@
     </li>
     <li class="nav-item">
       <a
-      (click)="findByIdUsuario()"
+        (click)="findByIdUsuario()"
         class="nav-link nav-link-color"
         id="pills-minhasPostagens-tab"
         data-toggle="pill"
@@ -100,11 +98,11 @@
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
           <div class="card-footer text-muted small">
-            {{item.data | date: 'dd/MM/yyyy'}} às {{ item.data | date: 'HH:mm'}} - {{ item.usuario.nome }}
+            {{ item.data | date: "dd/MM/yyyy" }} às
+            {{ item.data | date: "HH:mm" }} - {{ item.usuario.nome }}
           </div>
         </div>
       </div>
-
     </div>
     <div
       class="tab-pane fade"
@@ -113,23 +111,31 @@
       aria-labelledby="pills-minhasPostagens-tab"
     >
       <!-- Minhas postagens irão aqui -->
-      
+
       <div class="card-columns">
-        <div class="card text-center" *ngFor='let tema of usuario.postagens'>
+        <div class="card text-center" *ngFor="let usuario of usuario.postagens">
           <div class="card-header text-muted small">
-            {{ tema.tema.descricao }}
+            {{ usuario.tema.descricao }}
           </div>
           <div class="card-body">
-            <h5 class="card-title">{{ tema.titulo }}</h5>
-            <p class="card-text">{{ tema.texto }}</p>
+            <h5 class="card-title">{{ usuario.titulo }}</h5>
+            <p class="card-text">{{ usuario.texto }}</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
           <div class="card-footer text-muted small">
-            {{tema.data | date: 'dd/MM/yyyy'}} às {{ tema.data | date: 'HH:mm'}}
+            <div class="row">
+              <div class="col-md-6 d-flex justify-content-start">
+                {{ usuario.data | date: "dd/MM/yyyy" }} às
+                {{ usuario.data | date: "HH:mm" }}
+              </div>
+              <div class="col-md-6 d-flex justify-content-end">
+                <a class="text-success mr-2" [routerLink]="['/postagem-edit', usuario.id]">Editar</a>
+                <a class="text-danger" [routerLink]="['/postagem-delete', usuario.id]">Apagar</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
     <div
       class="tab-pane fade"
@@ -137,7 +143,23 @@
       role="tabpanel"
       aria-labelledby="pills-postagensTema-tab"
     >
-      Postagens pelo tema irão aqui
+      <!-- Postagens pelo tema irão aqui -->
+
+      <div class="card-columns" *ngFor="let tema of listaTemas">
+        <div class="card text-center" *ngFor="let item of tema.postagens">
+<!--           <div class="card-header text-muted small">
+            {{ item.tema.descricao }} 
+          </div> -->
+          <div class="card-body">
+            <h5 class="card-title">{{ item.titulo }}</h5>
+            <p class="card-text">{{ item.texto }}</p>
+          </div>
+          <div class="card-footer text-muted small">
+            {{ item.data | date: "dd/MM/yyyy" }} às
+            {{ item.data | date: "HH:mm" }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -201,7 +223,7 @@
               [(ngModel)]="idTema"
               (change)="(findByIdTema)"
             >
-              <option disabled selected>Selecione um tipo de usuário:</option>
+              <option disabled selected>Selecione um tema:</option>
               <option *ngFor="let item of listaTemas" value="{{ item.id }}">
                 {{ item.descricao }}
               </option>

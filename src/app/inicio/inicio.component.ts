@@ -32,12 +32,13 @@ export class InicioComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    window.scroll(0,0)
+
     if (environment.token == '') {
-      /* alert('Sua seção expirou, refaça o login!') */
+      alert('Sua seção expirou, refaça o login!')
       this.router.navigate(['/entrar']);
     }
 
-    
     this.authService.refreshToken()
     this.getAllTemas();
     this.getAllPostagens()
@@ -63,12 +64,12 @@ export class InicioComponent implements OnInit {
   }
 
   findByIdUsuario(){
-    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
 
-  publicar() {
+  /* publicar() {
     this.tema.id = this.idTema;
     this.postagem.tema = this.tema;
 
@@ -83,5 +84,28 @@ export class InicioComponent implements OnInit {
         this.postagem = new Postagem()
         this.getAllPostagens()
       });
+  } */
+
+  publicar(){
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+
+    this.usuario.id = this.idUsuario
+    this.postagem.usuario = this.usuario
+
+    this.postagemService.postPostagem(this.postagem).subscribe({
+      next:(resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem realizada com Sucesso!')
+      this.postagem = new Postagem()
+      this.getAllPostagens()
+
+      },
+      error: (erro) => {
+        if(erro.status == 500) {
+          alert('Preencha todos os campos para fazer uma postagem!')
+        }
+      }
+    })
   }
 }
