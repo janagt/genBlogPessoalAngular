@@ -32,6 +32,10 @@ export class AuthService {
     return this.http.post<Usuario>('https://janabp.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
+  atualizar(usuario: Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>('https://janabp.herokuapp.com/usuarios/atualizar',usuario,this.token)
+  }
+
   getByIdUsuario(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://janabp.herokuapp.com/usuarios/${id}`, this.token)
   }

@@ -14,13 +14,13 @@
                     <p class="m-0"><a class="nav-link t-boasvindas" href="#" alt="Imagem do usuário">Olá, {{nome}}</a></p>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-0 ml-2" href="#"><p class="m-0"><i class="fa-regular fa-pen-to-square text-roxo2"></i><!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --></p></a>
+                    <a [routerLink]="['/usuario-edit', id]"  class="nav-link p-0 ml-2" href="#"><p class="m-0"><i class="fa-regular fa-pen-to-square text-roxo2"></i><!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --></p></a>
                 </li>
             </ul>
-    
+
             <ul class="navbar-nav ml-auto d-flex align-items-center">
                 <li class="nav-item">
-                    <p class="m-0"><a (click)="sair()" href="">Sair <i class="fa fa-sign-out text-roxo2 p-0 ml-2" aria-hidden="true"></i></a></p>
+                    <p class="m-0"><a (click)="sair()">Sair <i class="fa fa-sign-out text-roxo2 p-0 ml-2" aria-hidden="true"></i></a></p>
                 </li>
             </ul>
         </div>
